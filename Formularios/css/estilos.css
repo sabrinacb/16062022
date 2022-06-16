@@ -1,0 +1,58 @@
+label {
+
+display: block;
+
+}
+
+/*me permite afectar a un elemento de formulario
+cuando le hago foco*/
+input:focus, select:focus{
+background-color: aliceblue;
+border:1px solid red;
+
+}
+
+
+textarea {
+
+width: 200px;
+height: 200px;
+resize: none;
+
+}
+
+
+select {
+
+height: 200px;
+
+}
+
+input,select,button {
+
+    width: 200px;
+    height: 30px;
+    border:1px solid black;
+    outline:none;
+    padding:0;
+    
+    /*borde hacia afuera
+    border:1px solid red;
+    outline:1px solid green;
+    
+    border-top-color:aliceblue;
+    border-top-style: solid;
+    border-top-width: 1px;
+    
+    */
+
+}
+
+
+input[type="checkbox"], input[type="radio"]{
+
+width: 15px;
+height: 15px;
+
+}
+

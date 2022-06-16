@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&family=Roboto:wght@400;700;900&display=swap');
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 90%;
+    background-color: #F2F2F2;
+    margin: 0;
+
+
+    /*
+   background-color: rgb(242,242,242)
+   background-color: red;
+
+    */
+
+
+}
+
+
+
+
+img {
+    width: 100%;
+}
+
+/*las imagenes si no les explicitamos un width, siempre conservan el width original que traen*/
+
+nav {
+
+    width: 100%;
+    /*si yo no le pongo un alto a un elemento el elemento fluye con el contenido => auto*/
+    border-top: 2px solid rgba(252, 238, 33, 0.7);
+
+
+}
+nav #barraNavegacion, footer div, main {
+
+    margin: 0 auto;
+    /*centrar automáticamente el elemento en referencia a su contenedor padre*/
+
+    /*
+margin-top:0;
+margin-bottom:0;
+margin-left: auto; 
+margin-right:auto;
+
+*/
+
+    width: 90%;
+
+}
+
+
+
+
+.contenedor {
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 20px;
+
+    /*
+
+100px width + 10px = 120px
+100px height + 10px = 120px
+
+padding-top:20px;
+padding-bottom:20px;
+padding-left:20px;
+padding-right:20px; 
+*/
+
+}
+
+section {
+
+    width: 50%;
+
+}
+
+
+
+h1 {
+    font-size: 4em;
+}
+
+/*  64px
+   medida base es 16px
+
+   64px * 100 / 16= 4em
+    
+
+
+*/
+h1, strong {
+    font-weight: 700;
+}
+
+/*selector grupal 
+afecta la regla de estilo a cuantos selectores estén en el grupo
+
+selector1, selector2, selector3 { propiedad:valor;}
+*/
+
+h1 strong, nav h1, footer h1 {
+    font-family: 'Coiny', cursive;
+    font-size: 7.33rem;
+}
+
+
+
+nav h1, footer h1 {
+
+    font-size: 3.5em;
+    margin: 0;
+    /* margin-top: 0;
+   margin-bottom:0;
+   margin-left:0;
+   margin-right: 0;
+   */
+
+}
+
+footer {
+
+    width: 100%;
+    background-color: rgba(252, 238, 33, 0.7);
+
+
+}
+
+ol {
+
+    font-size: 2em;
+    font-weight: 400;
+    list-style-position: inside;
+    /*hacer que las viñetas o números depende el tipo de estilo de lista formen parte de la misma*/
+
+}
+
+.color {
+
+    background-color: rgba(252, 238, 33, 0.7);
+    font-weight: 700;
+    font-size: 2.75em;
+}
+
+/*
+
+-El mismo nombre de id se puede utilizar sólo una vez por HTML
+-Las clases puede reutilizarse la cantidad de veces que necesitemos
+
+
+Todos == selector de etiqueta (h1,p, ul,etc.)
+Uno sólo == ID
+Varios == CLASS
+
+
+*/
+
+
+
+/*
+
+ul { list-style-type: none;}
+
+circle
+square
+ol {  list-style-type:upper-roman; }
+upper-alpha => letras mayúscula
+lower-alpha => " minúscula
+upper-roman => números/letras romanas en mayúscula
+lower-roman => " minúscula
+decimal => valor x defecto
+
+*/
+
+h2 {
+    font-weight: 400;
+    font-size: 1.66em;
+    background-color: rgba(252, 238, 33, 0.7);
+
+    /*
+    background-color: #fcee21;*/
+
+
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 2.66em;
+}
+#links {
+
+display: flex;
+justify-content: flex-end;
+align-items: center;
+
+}
+
+#links, nav h1 {
+    width: 33.33%;
+    margin: 0;
+ 
+
+
+}
+
+
+/*
+
+div, h1 {color: blue;}
+div { color: red;}
+ El último es el que queda
+.contenedor { color: blue;} 
+div { color: red;}
+
+Queda la clase porque es más específico
+
+.contenedor { color:yellow;}
+#contenedor { color: blue;}
+div { color: red;}
+
+El id le gana a la class y al selector de etiqueta
+
+
+
+
+
+
+
+*/
+
+#redes p {
+
+    font-size: 2.08em;
+    color: #808080;
+    font-weight: 700;
+
+}
+
+label {
+    display:block;
+    font-size:1.66em;
+    font-weight: 700;
+
+
+
+    
+ 
+    /*transformar el label en un elemento de bloque para así poder
+    generar que los elementos que vienen luego vayan debajo*/
+}
+
+label span { 
+    color:#C1272D; 
+
+}
+
+#redes div {
+
+
+    width: 8.33%;
+
+}
+
+.contenedor img {
+
+    width: 50%;
+
+}
+
+
+
+p {
+    font-size: 1.75em;
+}
+
+
+/* me refiero a todos los párrafos*/
+
+a {
+    color: black;
+    text-decoration: none;
+  
+
+}
+
+#links a {
+    text-transform: capitalize;
+    /*pone la primer letra de cada palabra en mayúscula*/
+
+
+}
+
+
+/*modifico el color de la tipografía de los vínculos*/
+
+#links a:hover {
+
+    text-decoration: underline;
+
+}
+
+/*hover me permite cambiar el aspecto de un elemento
+cuando le paso el mouse por arriba*/
+#redes img:hover {
+    filter: opacity(0.5);
+
+}
+
+
+#parrafo {
+    font-size: 2em;
+}
+
+/*
+#parrafo strong { background-color: yellow;}
+
+*/
+/*    
+Medidas absolutas (no varían según el medio, cm, mm, etc.)
+Medidas relativas (dependen del medio)
+
+-px => depende de la resolución de pantalla
+-em => proporcional
+
+-rem
+-ex
+-vh
+-vw
+
+*/
+
+
+/*breakpoints*/
+
+
+
+h4 {
+    font-size: 3.41em;
+    text-transform: uppercase;
+
+}
+
+
+
+#enunciado {
+
+    font-weight: 700;
+    font-size: 4.25em;
+    background-color: black;
+    color: white;
+
+}
+
+
+nav #barraNavegacion {
+    margin: 0;
+    width:100%;
+ 
+    display:flex;
+    justify-content: space-between;
+
+    /*en una pantalla pequeña
+lo dejamos al 100% y le saco el auto*/
+
+
+}
+
+
+
+
+
+@media (max-width:768px) {
+
+    body {
+        font-size: 70%;
+    }
+
+    h1 strong {
+        font-size: 2em;
+    }
+
+
+    nav #barraNavegacion {
+        margin: 0;
+        width: 100%;
+       
+     
+
+        /*en una pantalla pequeña
+    lo dejamos al 100% y le saco el auto*/
+
+
+    }
+}

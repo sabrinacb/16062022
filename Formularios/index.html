@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <form enctype="multipart/form-data" action="codigo.php" method="post">
+<label for="nacimiento">Nacimiento</label>
+<input type="date" name="nacimiento">
+        <label for="edadRotulo">Edad</label>
+        <input min="18" max="100" type="number" name="edad" id="edadRotulo">
+        <label for="nombre">Nombre</label>
+        <input  placeholder="Juan Rodriguez" id="nombre" type="text" name="nombre">
+
+        <label for="adjuntoEtiqueta">Adjuntar tu CV</label>
+        <input multiple name="adjunto" id="adjuntoEtiqueta" type="file">
+
+        <label for="telefono">Teléfono Formato: +99(99)9999-9999</label>
+        <input name="telefono" type="tel" required pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}">
+
+
+
+
+        <label for="paisMenu">Paises</label>
+
+        <select required name="pais" id="paisMenu">
+            <option value="">Elegir</option>
+            <option value="argentina">Argentina</option>
+            <option value="uruguay">Uruguay</option>
+            <option value="brasil">Brasil</option>
+        </select>
+
+        <label for="paisGusto">Paises que me gustan</label>
+
+        <select multiple required name="paisGustos" id="paisGusto">
+            <option value="">Elegir</option>
+            <option value="argentina">Argentina</option>
+            <option value="uruguay">Uruguay</option>
+            <option value="brasil">Brasil</option>
+        </select>
+
+        <label>Estado Civil</label>
+        <label>Casado <input required name="estado" value="casado" type="radio"></label>
+        <label>Soltero<input required name="estado" value="soltero" type="radio"></label>
+
+        <label>Hobbies</label>
+
+
+        <label>Deportes <input name="intereses" value="deportes" type="checkbox"></label>
+        <label>Viajes <input name="intereses" value="viajes" type="checkbox"></label>
+        <label>Indumentaria <input name="intereses" value="indumentaria" checked type="checkbox"></label>
+<label for="comentariosRotulo">Comentarios</label>
+   <textarea  id="comentariosRotulo" name="comentarios" ></textarea>
+
+
+        <button>Enviar</button>
+
+
+
+    </form>
+
+
+</body>
+
+</html>
